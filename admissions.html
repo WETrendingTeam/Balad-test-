@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admissions &amp; Enrolment | Balad Private Schools</title>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="script.js?v=5"></script>
+<script defer="" src="content-loader.js" type="module"></script>
+<style>
+/* Admissions visual upgrade */
+.admission-hero{
+  position:relative;min-height:500px;overflow:hidden;
+  background:linear-gradient(135deg,#075c46,#0b7658);
+}
+.admission-hero-media{position:absolute;inset:0;background:#dfeee8}
+.admission-hero-media img{
+  width:100%;height:100%;object-fit:cover;object-position:center 20%;
+}
+.admission-hero-media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(3,65,48,.70),rgba(3,65,48,.22) 65%,rgba(0,0,0,.08));
+}
+.admission-hero-media.fallback::before{
+  content:"BALAD PRIVATE SCHOOLS";
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.2);font-size:clamp(2rem,7vw,6rem);font-weight:900;
+}
+.admission-hero-overlay{
+  position:relative;z-index:2;min-height:500px;display:flex;align-items:center;color:#fff;
+}
+.admission-hero .eyebrow{color:#fff;font-weight:900;letter-spacing:.14em}
+.admission-hero h1{max-width:760px;font-size:clamp(2.3rem,6vw,5rem);line-height:1.02;color:#fff;margin:8px 0 15px}
+.admission-hero p:not(.eyebrow){max-width:650px;font-size:1.1rem;color:rgba(255,255,255,.94)}
+.admission-media-section{
+  background:linear-gradient(135deg,#f2f8f5 0%,#fff 62%,#f7f0e3 100%);
+}
+.admission-media-grid{
+  display:grid;grid-template-columns:1.35fr 1fr 1fr;grid-auto-rows:180px;gap:12px;
+}
+.admission-media-card{
+  position:relative;overflow:hidden;border-radius:16px;background:#dfeee8;border:1px solid var(--line);
+}
+.admission-media-card.large{grid-row:span 2}
+.admission-media-card img{width:100%;height:100%;object-fit:cover}
+.admission-media-card figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:15px;
+  color:#fff;background:linear-gradient(transparent,rgba(3,48,36,.76));
+}
+.admission-media-card figcaption strong{display:block;font-size:1rem}
+.admission-media-card figcaption span{display:block;font-size:.77rem;margin-top:2px;color:rgba(255,255,255,.9)}
+.admission-video-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.admission-video-card{overflow:hidden;border-radius:16px;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}
+.admission-video-card video{display:block;width:100%;height:260px;object-fit:cover;background:#eaf3ef}
+.admission-video-card>div{padding:14px 16px}
+.admission-video-card strong{color:var(--green)}
+.admission-video-card p{margin:3px 0 0;color:var(--muted);font-size:.82rem}
+@media(max-width:700px){
+  .admission-hero,.admission-hero-overlay{min-height:470px}
+  .admission-media-grid{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .admission-media-card.large{grid-column:span 2;grid-row:span 2}
+  .admission-video-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body data-cms-page="admissions">
+<header>
+<div class="logo">
+<img alt="Balad Private Schools Logo" data-media-key="admissions-image-1" src="images/logo.png"/>
+<div class="school-name">
+<h2>BALAD PRIVATE SCHOOLS</h2>
+<p>Pre-Crèche • Crèche • Nursery • Primary • College • CBT Centre</p>
+<small>"Nothing but Success"</small>
+</div>
+</div>
+<input class="menu-toggle" id="balad-menu-toggle" type="checkbox"/>
+<label aria-label="Open menu" class="menu-btn" for="balad-menu-toggle">
+<span class="menu-icon-open">☰</span>
+<span class="menu-icon-close">×</span>
+</label>
+<nav id="balad-main-nav">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<details class="academic-nav school-nav">
+<summary>Schools</summary>
+<div class="academic-submenu">
+<a href="nursery-primary.html">Balad Nursery &amp; Primary</a>
+<a href="comprehensive-college.html">Balad Comprehensive College</a>
+</div>
+</details>
+<a href="cbt-centre.html">CBT Centre</a>
+<a class="active" href="admissions.html">Admissions</a>
+<details class="academic-nav">
+<summary>Academics</summary>
+<div class="academic-submenu">
+<a href="curriculum.html">Curriculum</a>
+<a href="stem.html">STEM</a>
+<a href="results.html">Result Portal</a>
+</div>
+</details>
+<a href="team.html">Meet Our Team</a>
+<a href="facilities.html">Facilities</a>
+<a href="gallery.html">Gallery</a>
+<a href="news.html">News &amp; Events</a>
+<a href="alumni.html">Alumni</a>
+<a class="nav-login-button" href="control-login.html">LOGIN</a>
+<a class="nav-contact-button" href="contact.html">CONTACT US</a>
+</nav>
+</header>
+<main>
+<section class="admission-hero">
+  <div class="admission-hero-media">
+    <img src="images/admission-exam.jpg" alt="Student preparing for an examination"
+         onerror="this.style.display='none';this.parentElement.classList.add('fallback')">
+  </div>
+  <div class="admission-hero-overlay">
+    <div class="container">
+      <p class="eyebrow">ADMISSIONS ARE OPEN</p>
+      <h1>Your Child’s Journey to Excellence Starts Here</h1>
+      <p>Give your child a strong foundation for learning, character and future success at BALAD Private Schools.</p>
+      <div class="hero-buttons">
+        <a class="btn" href="#admission-process">Start Your Application</a>
+        <a class="btn btn-secondary" href="#requirements">Admission Requirements</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="admission-requirements" id="requirements">
+<h2 data-text-key="admissions-text-1">Admission Requirements</h2>
+<p class="requirements-subtitle" data-text-key="admissions-text-2">
+        Please prepare the following documents for admission.
+    </p>
+<div class="requirements-grid">
+<div class="requirement-card">
+<h3 data-text-key="admissions-text-3">Completed Admission Form</h3>
+</div>
+<div class="requirement-card">
+<h3 data-text-key="admissions-text-4">Recent Passport Photographs</h3>
+</div>
+<div class="requirement-card">
+<h3 data-text-key="admissions-text-5">Previous School Records</h3>
+<p data-text-key="admissions-text-6">Where applicable</p>
+</div>
+<div class="requirement-card">
+<h3 data-text-key="admissions-text-7">Birth Certificate / Identification</h3>
+</div>
+<div class="requirement-card">
+<h3 data-text-key="admissions-text-8">Other Required Documents</h3>
+</div>
+</div>
+</section>
+<section class="admission-process" id="admission-process">
+<h2 data-text-key="admissions-text-9">Admission Process</h2>
+<p class="process-subtitle" data-text-key="admissions-text-10">
+Our simple admission process guides parents smoothly from enquiry to school resumption.
+</p>
+<div class="process-grid">
+<div class="process-step">
+<h3 data-text-key="admissions-text-11">1. Enquiry</h3>
+<p data-text-key="admissions-text-12">
+Contact the school to receive information about admission availability and procedures.
+</p>
+</div>
+<div class="process-step">
+<h3 data-text-key="admissions-text-13">2. Application</h3>
+<p data-text-key="admissions-text-14">
+Complete the admission form and provide the required details about the learner.
+</p>
+</div>
+<div class="process-step">
+<h3 data-text-key="admissions-text-15">3. Assessment / Interview</h3>
+<p data-text-key="admissions-text-16">
+The learner may undergo an assessment or interview for appropriate class placement.
+</p>
+</div>
+<div class="process-step">
+<h3 data-text-key="admissions-text-17">4. Admission Confirmation</h3>
+<p data-text-key="admissions-text-18">
+Successful applicants receive confirmation and further instructions from the school.
+</p>
+</div>
+<div class="process-step">
+<h3 data-text-key="admissions-text-19">5. Resumption</h3>
+<p data-text-key="admissions-text-20">
+Complete registration and begin your child's educational journey at Balad Private Schools.
+</p>
+</div>
+</div>
+</section>
+<section class="faq-section">
+<h2 data-text-key="admissions-text-21"> FAQ </h2>
+<div class="faq-container">
+<div class="faq-item">
+<button class="faq-question">
+<span>How can I apply for admission?</span>
+<span class="faq-icon"></span>
+</button>
+<div class="faq-answer">
+<p data-text-key="admissions-text-22">
+                    Parents can contact the school or visit the school to begin the admission process.
+                </p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">
+<span>What classes are available for admission?</span>
+<span class="faq-icon"></span>
+</button>
+<div class="faq-answer">
+<p data-text-key="admissions-text-23">
+                    Admission is available into Pre-Crèche, Crèche, Nursery, Primary and College, subject to available spaces.
+                </p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">
+<span>Is there an entrance assessment?</span>
+<span class="faq-icon"></span>
+</button>
+<div class="faq-answer">
+<p data-text-key="admissions-text-24">
+                    Yes. Learners may undergo an assessment or interview before being placed in the appropriate class.
+                </p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question">
+<span>Can transfer students apply?</span>
+<span class="faq-icon"></span>
+</button>
+<div class="faq-answer">
+<p data-text-key="admissions-text-25">
+                    Yes. Transfer students are welcome and may be required to provide previous academic records.
+                </p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="admission-cta">
+<h2 data-text-key="admissions-text-28">Ready to Join Balad Private Schools?</h2>
+<p data-text-key="admissions-text-29">
+Give your child the opportunity to learn, grow and succeed in a supportive environment built on excellence and strong values.
+</p>
+<a class="cta-btn" href="contact.html">
+Apply for Admission
+</a>
+</section>
+</section></main>
+<section class="cms-public-content-wrap"><div class="cms-public-content" data-cms-page="admissions" id="cms-page-content"></div></section><footer>
+  <div class="footer-bottom">
+    © <span data-year></span> BALAD Private Schools. All Rights Reserved.
+    <div class="site-footer-developer">Web developer: <a href="https://wa.me/2349164435249" target="_blank" rel="noopener noreferrer">Lade</a></div>
+  </div>
+</footer>
+</body>
+</html>
